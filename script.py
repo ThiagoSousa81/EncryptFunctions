@@ -1,4 +1,4 @@
-# Funções de criptografia em Pyhton
+# Funções de criptografia básica em Pyhton
 
 class Encrypt1(object):
     def function(self, x: float):
@@ -7,5 +7,9 @@ class Encrypt1(object):
         return (y /2) + 3
 
 F = Encrypt1()
-print(F.function(9))
-print(F.inverse(F.function(9)))
+while (True):
+    x = input('Digite um número: ')
+    print('Número cifrado...')
+    print(F.function(float(x)))
+    print('Número decifrado...')
+    print(F.inverse(F.function(float(x))))
